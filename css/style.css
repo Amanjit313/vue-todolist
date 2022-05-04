@@ -42,22 +42,37 @@ img{
 
 /* Container delle mie todo attive */
 .container-todo{
-  width: 65vh;
+  width: 50vh;
   min-height: 55vh;
-  /* background-color: lightgray; */
   margin: 0 auto;
-  /* border-radius: 20px; */
+}
+
+.container-todo ul{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
 }
 
 .container-todo li{
   list-style: none;
-  /* background-color: white; */
-  border-bottom: 1px solid black;
   padding: 10px;
   font-size: 1.2rem;
 }
 
-.container-todo li:hover{
+.container-todo i{
+  padding: 14px;
+}
+
+.container-todo i:hover{
+  color: red;
+}
+
+.container-todo ul:hover{
   background-color: gold;
   cursor: pointer;
+}
+
+/* Altre classi */
+.barrato{
+  text-decoration: line-through;
 }
