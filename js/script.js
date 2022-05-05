@@ -38,12 +38,19 @@ const app = new Vue({
         done: false
       }
 
-    ]
+    ],
 
+    newTodos:
+    
+    {
+      task: "",
+      done: false
+    }
+    
   },
 
   methods:{
-
+    
     // Condizione true false per mettere la classe barrata
     addClassThrough(index){
       if(!this.todos[index].done){
@@ -52,14 +59,22 @@ const app = new Vue({
         this.todos[index].done = false
       }
     },
-
+    
     // Funzione per eliminare un todos
     removeToDo(index){
       if(confirm(`Sei sicuro di voler eliminare la task: ${this.todos[index].task}?`)){
         this.todos.splice(index, 1);
       }
+    },
+    
+    // Funzione per addare nuovi ToDo
+    addTodos(){
+      if(this.newTodos.task.length > 1){
+        this.todos.push({...this.newTodos});
+        this.newTodos.task = "";
+      }
     }
-
-  }
+    
+  },  
 
 })

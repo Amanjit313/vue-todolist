@@ -22,8 +22,8 @@
     
     <!-- Input per addare nuovi todo -->
     <div class="add-new-todo">
-      <input v-model = "messaggio" placeholder="Aggiungi un ToDo" type="text">
-      <button>AGGIUNGI</button>
+      <input v-model.trim = "newTodos.task" placeholder="Aggiungi un ToDo" type="text">
+      <button @click="addTodos(this)">AGGIUNGI</button>
     </div>
     <!-- /Input per addare nuovi todo -->
 
